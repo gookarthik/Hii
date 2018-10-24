@@ -127,6 +127,13 @@ To Import Bulk-api-v2 project from existing location in to sts ide
 --
 -  In STS, Click on File in menu bar, click on import then in Maven Projects, click on Existing Maven Projects. Click on Next. Pop-up 	window appears, Click on browse and search the path of bulk-api-v2 project and finally finish
 
+	To Run Bulk-api-v2 Project
+	--
+	
+	- Right Click on bulk-api-v2 then Click Run AS and Run on Server, a pop-up window opens
+	- Select Pivotal or Apache Tomcat Server then Finish
+	- Output is shown in console output with local url http://localhost:8080/bulk-data-api/ 
+	
 	Client Registration
 	--
 
@@ -153,9 +160,3 @@ To Import Bulk-api-v2 project from existing location in to sts ide
 	Client ID :     bulk data apiVxAHtrAqt1
 	Token URL :  http://localhost:9090/bulk-data-api/token
 	```
-	To Run Bulk-api-v2 Project
-	--
-	
-	- Right Click on bulk-api-v2 then Click Run AS and Run on Server, a pop-up window opens
-	- Select Pivotal or Apache Tomcat Server then Finish
-	- Output is shown in console output with local url http://localhost:8080/bulk-data-api/ 
