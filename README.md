@@ -1,4 +1,4 @@
-Documentation to Run Spring Project Bulk-api-v2
+Documentation for Bulk-api-v2 setup instructions in Windows
 -
 
 ### Prerequisites
@@ -81,7 +81,7 @@ To Create Database
 - A pop-up window will open, give Database name as bulkdataclient and Save.
 Now to Import Database
 -  Open Command Prompt in Administrator mode and go set parh to bin folder of postgre and type below command then enter.
-psql -h localhost -d bulkdataclient -U postgres -f " C:\export_30-03-2018.sql"
+psql -h localhost -d bulkdataclient -U postgres -f " C:\bulkdata.sql"
 Below is the output from command prompt:
 
 ```
@@ -127,6 +127,32 @@ To Import Bulk-api-v2 project from existing location in to sts ide
 --
 -  In STS, Click on File in menu bar, click on import then in Maven Projects, click on Existing Maven Projects. Click on Next. Pop-up 	window appears, Click on browse and search the path of bulk-api-v2 project and finally finish
 
+	Client Registration
+	--
+
+	-  After running above project, we have to do client registration with local url http://localhost:9090/bulk-data-api/view/clients.html  with following details
+	- Registring New Client 
+	```
+		UserName 	abc123
+		Email    	abc123@gmail.com
+		Full Name 	abcdefg
+		Password 	abcxyz
+	```
+	-  Then give OK, inside this another web page opens, click on Register Backend Client with public der file, check for both system and user.
+	```
+	Backend Client Registration
+		Client App Name       bulk data api
+		Organization	      Xyram
+		Client Issuer URL     http://localhost:8080/bulk-data-api/
+		Public Key            Upload Public Key
+		Scope		      Check both system and user	
+	```
+
+	- After registration it generate ClientID and token URL as follows
+	```
+	Client ID :     bulk data apiVxAHtrAqt1
+	Token URL :  http://localhost:9090/bulk-data-api/token
+	```
 	To Run Bulk-api-v2 Project
 	--
 	
