@@ -137,7 +137,7 @@ To Import Bulk-api-v2 project from existing location in to sts ide
 	Client Registration
 	--
 
-	-  After running above project, we have to do client registration with local url http://localhost:9090/bulk-data-api/view/clients.html  with following details
+	-  After running above project, we have to do client registration with local url http://localhost:8080/bulk-data-api/view/clients.html  with following details
 	- Registring New Client 
 	```
 		UserName 	abc123
@@ -158,5 +158,5 @@ To Import Bulk-api-v2 project from existing location in to sts ide
 	- After registration it generate ClientID and token URL as follows
 	```
 	Client ID :     bulk data apiVxAHtrAqt1
-	Token URL :  http://localhost:9090/bulk-data-api/token
+	Token URL :  http://localhost:8080/bulk-data-api/token
 	```
