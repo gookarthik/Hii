@@ -24,7 +24,7 @@ Download JDK for Windows
 	-
 	-  In Command Prompt type java -version
 ```
-	C:\Users\it-su>java -version
+	<<java install dir>> java -version
 	java version "1.8.0_161"
 	Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
 	Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
@@ -36,16 +36,16 @@ Setting JAVA_HOME and JRE_HOME
 In System variables, double click on path, Here we can Edit
 Click on new and paste bin path of jdk and again click on new and paste bin path of jre 
 ```
-C:\Program Files\Java\jdk1.8.0_161\bin
-C:\Program Files\Java\jre1.8.0_161\bin
+<<java install dir>> \Java\jdk1.8.0_161\bin
+<<java install dir>> \Java\jre1.8.0_161\bin
 ```
 In User variables, click on New and set JAVA_HOME press OK , again New for JRE_HOME and click OK
 ```
 Variable Name	JAVA_HOME
-Variable Value   C:\Program Files\Java\jdk1.8.0_161
+Variable Value   <<java install dir>> \Java\jdk1.8.0_161
 
 Variable Name	JRE_HOME
-Variable Value   C:\Program Files\Java\jre1.8.0_161
+Variable Value   <<java install dir>> \Java\jre1.8.0_161
 ```
 
 Download and Install Apache Tomact 
@@ -56,7 +56,7 @@ https://tomcat.apache.org/download-90.cgi
 - Go To Downloads, unzip apache-tomcat-8.0.53-windows-x64.zipin Apache Software Foundation in Program Files. 
 - Open Command Prompt by typing cmd in Search option in Windows button. Type below commands each and enter.
 ```
-cd C:\Program Files\Apache Software Foundation\apache-tomcat-8.0.53\bin\catalina run
+cd <<apache tomcat install dir>>\apache-tomcat-8.0.53\bin\catalina run
 ```
 -  Now Open Chrome and type http://localhost:8080/ to open Tomcat home Page, this verifies Tomcat is running successfully in our machine.
 --------------------------------------------------------------------------------------------------------------------------------------
@@ -85,13 +85,17 @@ psql -h localhost -d bulkdataclient -U postgres -f " C:\bulkdata.sql"
 Below is the output from command prompt:
 
 ```
-	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d bulkdataclient -U postgres -f "C:\bulkdata.sql"
-	Password for user postgres: XYZ
-	
-	SET
-	
-	CREATE
-	...
+	<<postgres install dir>> \PostgreSQL\10\bin>psql -h localhost -d bulkdataclient -U postgres -f "C:\bulkdata.sql"
+```
+Load DSTU2 schema and data
+-
+Create the database by running the below command in command prompt
+```
+	$ createdb -h localhost -p 5432 -U postgres hapi
+```
+DSTU2 database file “hapi-server.backup” is located under root directory. Load schema and sample data using psql command
+```
+	$ psql -U postgres -d hapi -f hapi-server.backup
 ```
 
 Spring Tool Suite Installation
