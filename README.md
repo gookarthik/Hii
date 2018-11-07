@@ -97,6 +97,12 @@ DSTU2 database file “hapi-server.backup” is located under root directory. Lo
 ```
 	$ psql -U postgres -d hapi -f hapi-server.backup
 ```
+Clone FHIR Server repository
+-
+Clone FHIR Server repository using command
+```
+$ git clone https://github.com/siteadmin/fhir-tools.git
+```
 
 Spring Tool Suite Installation
 -
