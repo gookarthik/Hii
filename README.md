@@ -54,6 +54,12 @@ Open the Web browser say Chrome to download Apache Tomcat 9.0.8 with link given 
 https://tomcat.apache.org/download-90.cgi
 - Download the 64-bit Windows zip (pgp, sha512) file of Apache tomcat.
 - Go To Downloads, unzip apache-tomcat-8.0.53-windows-x64.zipin Apache Software Foundation in Program Files. 
+- Add below two lines in Server.xml which is in conf file of Apache Tomcat Folder
+```
+	<Context path="/open" docBase="./fhirserver"/>
+        <Context path="/secure" docBase="./fhirserver"/>
+```
+
 - Open Command Prompt by typing cmd in Search option in Windows button. Type below commands each and enter.
 ```
 cd <<apache tomcat install dir>>\apache-tomcat-8.0.53\bin\catalina run
